@@ -1,0 +1,33 @@
+
+.main{
+    color: white;
+    background-color: black;
+}
+.main input{
+    margin-top: 20px;
+    margin-left: 10%;
+    height: 50px;
+    width: 70%;
+    position: sticky;
+    top: 0;
+
+}
+.img-contain{
+    cursor: pointer;
+    padding-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    color: red;
+    
+}
+.img-contain div{
+    
+    margin-top: 20px;
+    text-align: center;
+    padding: 20px 20px;
+}
+.template p{
+    padding: 10px 0;
+    color:white;
+}

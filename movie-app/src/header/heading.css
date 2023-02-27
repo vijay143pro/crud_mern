@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.total-container{
+    position: sticky;
+    top: 0;
+    background-color: rgb(56, 50, 50);
+    color: white;
+    width: 100vw;
+}
+.heading{
+    padding: 15px;
+}
+.logo{
+    margin-left: 10px;
+    font-size: 20px;
+    letter-spacing: 5px;
+    float: left;
+}
+.style-logo{
+    color: red;
+}
+.signup{
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    margin-left: 90%;
+    background-color: gray;
+}
+a:-webkit-any-link{
+    text-decoration: none;
+    color: aqua;
+}
