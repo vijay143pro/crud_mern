@@ -1,5 +1,9 @@
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
+import $ from 'jquery';
+import Popper from 'popper.js';
 import Carousel from './carousel/Carousel';
 import {useState,useEffect} from "react"
 import giphy from './asserts/1496.gif'
@@ -24,10 +28,12 @@ function App() {
           <Route path='/' element={<Heading/>}></Route> 
           <Route path='/form' element={<Form/>}></Route>
           <Route path='/dash' element={<Dashboard/>}></Route>
+          <Route path='/movie' element={<MovieContent/>}></Route>
+          <Route path='/car' ></Route>
         </Routes>
       </BrowserRouter> 
-      <MovieContent/>  
-      <Carousel/>
+      
+   
       </div>
 
     }

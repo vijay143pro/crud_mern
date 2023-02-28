@@ -1,0 +1,25 @@
+
+table{
+   
+    text-align: center;
+}
+.table>:not(caption)>*>*{
+   background-color: rgb(88, 88, 88);
+
+}
+.btn-1 {
+    background-color: white;
+    padding:15px 15px;
+    border-radius: 99%;
+    position: absolute;
+    left: 62%;
+    top: 88%;
+}
+.btn-2{
+   background-color: white;
+   border-radius: 99%;
+   position: absolute;
+   left: 70%;
+   top: 88%;
+   padding: 3px 5px;
+}

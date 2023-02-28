@@ -3,6 +3,8 @@ import logImg from '../asserts/signup-img.jpg'
 import './form.css'
 import axios from "axios";
 import { json } from "react-router-dom";
+import logo1 from '../asserts/google.svg';
+import logo2 from '../asserts/fb.svg';
 class Form extends React.Component {
   //Mounting
 
@@ -35,7 +37,7 @@ handleSubmit=(e)=>{
         alert("Fill the field")
     }
     else{
-      e.preventDefault()
+      
         alert("You Login successfully")
         axios.post("http://localhost:4000/info",({"name":this.state.Name,"age":this.state.age,"email":this.state.mail,"password":this.state.password})).then(()=>{
           console.log("data sent")
@@ -108,9 +110,9 @@ handleSubmit=(e)=>{
       <div className="login-img">
         <img src={logImg}/>
         </div>
-      <form onSubmit={(e)=>{this.handleSubmit(e)}} className="login-form">
+      <form onSubmit={(e)=>{this.handleSubmit(e)}} className="login-form" method="post">
       <h1>Sign up</h1>
-      <label for="name">Name:</label><br></br>
+      <label for="name">Name:</label><br/>
         <input
           name="Name"
           id="f1"
@@ -118,24 +120,27 @@ handleSubmit=(e)=>{
           placeholder="Name"
           onChange={(e) => this.handleChange(e)}
         ></input>
-        <span className="err">{this.state.firstErr}</span><br></br>
+        <span className="err">{this.state.firstErr}</span><br/>
 
-        <label for="age">Age:</label><br></br>
+        <label for="age">Age:</label><br/>
         <input type="number" id="age" name="age" value={age}  placeholder="Age"
         onChange={(e) => this.handleChange(e)}></input>
          <span className="err">{this.state.ageErr}</span><br></br>
          
-          <label for="email">Email:</label><br></br>
+          <label for="email">Email:</label><br/>
         <input type="email" id="mail" name="mail" value={mail}  placeholder="Email"
         onChange={(e) => this.handleChange(e)}></input>
          <span className="err">{this.state.mailErr}</span><br></br>
         
-         <label for="password">Password:</label><br></br>
+         <label for="password">Password:</label><br/>
         <input type="password" id="pass" name="password" value={password} placeholder="Password"
-        onChange={(e) => this.handleChange(e)}></input>
-         <span className="err">{this.state.passErr}</span><br></br><br></br>
-        <button className="submit">Submit</button>
+        onChange={(e) => this.handleChange(e)}></input><br/><br/>
+        <span><a href="">Forget password</a></span><br/>
+         <span className="err">{this.state.passErr}</span><br/>
+        <button className="submit">Submit</button><br/><br/>
         </form>
+        <button className="btn btn-1"><img src={logo1}/></button> 
+        <button className="btn btn-2"><img src={logo2} width="50px"/></button><br/><br/>
       </div>
       </div>
     );
